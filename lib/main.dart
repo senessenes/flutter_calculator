@@ -23,6 +23,7 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   String gosterilecek = "";
+
   NumberButton buttonC = new NumberButton(
     color: Colors.grey,
     content: 'C',
@@ -93,9 +94,21 @@ class _HomeState extends State<Home> {
     color: Colors.amber,
     content: '=',
   );
+  NumberButton buttonDot = new NumberButton(
+    color: Colors.grey[700],
+    content: '.',
+  );
 
   @override
   Widget build(BuildContext context) {
+    buttonDot.onpressed = () {
+      if ((icindeVarMi(".", globals.output)) == false) {
+        buttonpressed(".");
+        setState(() {
+          gosterilecek = globals.output;
+        });
+      }
+    };
     button0.onpressed = () {
       buttonpressed("0");
       setState(() {
@@ -163,7 +176,7 @@ class _HomeState extends State<Home> {
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             Container(
-                padding: EdgeInsets.fromLTRB(0, 75, 50, 0),
+                padding: EdgeInsets.fromLTRB(0, 75, 20, 0),
                 child: Text(
                   '${gosterilecek}',
                   style: TextStyle(
@@ -328,8 +341,12 @@ class _HomeState extends State<Home> {
             Row(
               children: [
                 Expanded(
+                    flex: 2,
                     child:
                         Container(margin: EdgeInsets.all(10), child: button0)),
+                Expanded(
+                    child: Container(
+                        margin: EdgeInsets.all(10), child: buttonDot)),
                 Expanded(
                     child: Container(
                   margin: EdgeInsets.all(10),
@@ -460,4 +477,13 @@ void buttonpressed(String buttonText) {
       globals.sayi2 = globals.outputinteger;
     }
   }
+}
+
+bool icindeVarMi(String karakter, String kontrolKelime) {
+  for (int i = 0; i < kontrolKelime.length; i++) {
+    if (kontrolKelime[i] == karakter) {
+      return true;
+    }
+  }
+  return false;
 }
