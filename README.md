@@ -1,23 +1,13 @@
 # calculator
 
-A new Flutter project.
+A calculator app made using Flutter and Dart.
 
-## Getting Started
+## Images From App
 
-This project is a starting point for a Flutter application.
+##IOS
 
-A few resources to get you started if this is your first Flutter project:
+##MacOS
+<img width="793" alt="Calculator_MacOS" src="https://user-images.githubusercontent.com/70953871/223139476-17c9095f-c3fb-4da3-b7b1-9d566f07dab6.png">
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# flutter_calculator
-# flutter_calculator
-# flutter_calculator
-# flutter_calculator
-# flutter_calculator
-# flutter_calculator
-# flutter_calculator
+
